@@ -11,9 +11,14 @@ The aim of the project is to create compare the results of different triangulati
 — [libtess](https://github.com/brendankenny/libtess.js/) - libtess tesselation library<br>
 
 
-### Usage ###
+### Viewers ###
 
 For now there are two viewers.
 
-- One single screen viewer where the triangulation result of a certain shape with a selected algorithm can be viewed.
-- And multiple screen viewer where the triangulation result of a certain shape can be seen for all algorithms at the same time.
+- One [single screen viewer](single.html) where the triangulation result of a certain shape with a selected algorithm can be viewed.
+- And [multiple screen viewer](multiple.html) where the triangulation result of a certain shape can be seen for all algorithms at the same time.
+
+
+### Benchmarking ###
+
+The next step will be to do some benchmarking of the different algorithms
