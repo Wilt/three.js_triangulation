@@ -5,10 +5,10 @@ three.js - triangulation
 
 The aim of the project is to create compare the results of different triangulation/tesselation algorithms/libraries in three.js
 
-— [Original](https://github.com/mrdoob/three.js/blob/master/src/extras/ShapeUtils.js) (original algorithm from THREE.ShapeUtils)
-— [Earcut](https://github.com/mapbox/earcut) (earcut triangulation library)
-— [poly2tri](https://github.com/r3mi/poly2tri.js) (poly2tri triangulation library)
-— [libtess](https://github.com/brendankenny/libtess.js/) (libtess tesselation library)
+— [Original](https://github.com/mrdoob/three.js/blob/master/src/extras/ShapeUtils.js) (original algorithm from THREE.ShapeUtils)<br>
+— [Earcut](https://github.com/mapbox/earcut) (earcut triangulation library)<br>
+— [poly2tri](https://github.com/r3mi/poly2tri.js) (poly2tri triangulation library)<br>
+— [libtess](https://github.com/brendankenny/libtess.js/) (libtess tesselation library)<br>
 
 
 ### Usage ###
