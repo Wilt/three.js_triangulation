@@ -139,11 +139,7 @@ function populateAlgorithmSelectList(){
 
         option.value = i;
 
-        console.log( urlParams );
-
         if ('algorithm' in urlParams && option.value == urlParams['algorithm']) {
-
-            console.log( option.value );
 
             option.selected = true;
 
