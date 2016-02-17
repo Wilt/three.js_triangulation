@@ -7,8 +7,8 @@ var triangulate = THREE.ShapeUtils.triangulate;
 
 function setShapeUtils( index ){
 
-    THREE.ShapeUtils.triangulate = ShapeUtils[ index].triangulate;
-    THREE.ShapeUtils.triangulateShape = ShapeUtils[ index].triangulateShape;
+    THREE.ShapeUtils.triangulate = ShapeUtils[ index ].triangulate;
+    THREE.ShapeUtils.triangulateShape = ShapeUtils[ index ].triangulateShape;
 
 }
 
@@ -53,7 +53,7 @@ ShapeUtils[0] = {
 
     triangulate: triangulate,
 
-    triangulateShape: function (contour, holes) {
+    triangulateShape: function ( contour, holes ) {
 
         var result;
 
@@ -61,7 +61,7 @@ ShapeUtils[0] = {
 
         result = triangulateShape(contour, holes);
 
-        console.time("original");
+        console.timeEnd("original");
 
         return result;
 
@@ -234,4 +234,5 @@ ShapeUtils[3] = {
         }
 
     }
+
 };
