@@ -81,11 +81,25 @@ function onWindowResize() {
  */
 function onLoad( shape ) {
 
-    setShapeUtils( urlParams['algorithm'] );
+    var index, geometry, material, mesh, wireFrame, box, algorithm;
 
-    var i, geometry, material, mesh, wireFrame, box;
+    index = urlParams['algorithm'];
 
-    geometry = shape.makeGeometry();
+    setShapeUtils( index );
+
+    algorithm = algorithms[ index ];
+
+    try {
+
+        geometry = shape.makeGeometry();
+
+    } catch( error ){
+
+        console.timeEnd( algorithm );
+
+        console.warn( algorithm + " failed: " + error.message );
+
+    }
 
     material = new THREE.MeshBasicMaterial({color: 0xff0000});
 
@@ -113,10 +127,7 @@ function onLoad( shape ) {
 function populateAlgorithmSelectList(){
 
     var i, algorithm, option,
-        select = document.getElementById('algorithm_select'),
-        algorithms = [
-            "original", "earclip", "poly2tri", "libtess"
-        ];
+        select = document.getElementById('algorithm_select');
 
     for ( i = 0; i < 4; i++) {
 

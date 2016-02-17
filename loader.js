@@ -1,5 +1,12 @@
 var urlParams = {};
 var shapes = [];
+var algorithms = [
+    "original",
+    "earclip",
+    "poly2tri",
+    "libtess"
+];
+
 
 loadShape = function( url, callback ){
     var XMLHttp = new XMLHttpRequest();

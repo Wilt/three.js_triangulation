@@ -101,25 +101,37 @@ function setCameras() {
  */
 function onLoad( shape ) {
 
-    var i, geometry, material, mesh, wireFrame, box;
+    var i, geometry, material, mesh, wireFrame, box, algorithm;
 
     for( i = 0; i < 4; i++ ){
 
-        setShapeUtils( i );
+        algorithm = algorithms[i];
 
-        geometry = shape.makeGeometry();
+        setShapeUtils(i);
+
+        try {
+
+            geometry = shape.makeGeometry();
+
+        } catch( error ){
+
+            console.timeEnd( algorithm );
+
+            console.warn( algorithm + " failed: " + error.message );
+
+        }
 
         material = new THREE.MeshBasicMaterial({color: 0xff0000});
 
         mesh = new THREE.Mesh(geometry, material);
 
-        wireFrame = new THREE.WireframeHelper( mesh, 0xffffff );
+        wireFrame = new THREE.WireframeHelper(mesh, 0xffffff);
 
         geometry.computeBoundingBox();
 
         box = geometry.boundingBox;
 
-        mesh.position.copy( box.center().negate() );
+        mesh.position.copy(box.center().negate());
 
         camera.position.setZ(Math.abs(Math.max(box.max.x - box.min.x, box.max.y - box.min.y)) * 1.5);
 
