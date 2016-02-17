@@ -1,0 +1,14 @@
+{
+  "name": "degenerate",
+  "source": "https://github.com/mapbox/earcut/tree/master/test/fixtures",
+  "shape": [
+    100,100,
+    100,100,
+    200,100,
+    200,200,
+    200,100,
+    0,100
+  ],
+  "holes": [
+  ]
+}

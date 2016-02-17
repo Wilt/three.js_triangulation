@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>single algorithm viewer</title>
+    <script type="text/javascript" src="https://rawgit.com/mrdoob/three.js/master/build/three.js"></script>
+    <script src='https://rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js'></script>
+    <script>module = {}</script>
+    <script src='https://rawgit.com/mapbox/earcut/master/src/earcut.js'></script>
+    <script src='https://rawgit.com/r3mi/poly2tri.js/master/dist/poly2tri.js'></script>
+    <script src='https://rawgit.com/brendankenny/libtess.js/gh-pages/libtess.min.js'></script>
+    <script type="text/javascript" src="triangulate.js"></script>
+    <script type="text/javascript" src="single_viewer.js"></script>
+    <script type="text/javascript" src="loader.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+<div id="container">
+</div>
+<div id="info">
+    <a href="http://threejs.org/" target="_blank">three.js</a> - Shape triangulation
+</div>
+<div id="center">
+    <div id="progress"></div>
+</div>
+<form id="load_shape" method="GET">
+    <label for="shape_select" >
+        Select a shape:
+    </label>
+    <select id="shape_select" name="shape">
+    </select>
+    <label for="algorithm_select" >
+        Select an algorithm:
+    </label>
+    <select id="algorithm_select" name="algorithm">
+    </select>
+    <button type="submit" form="load_shape" value="Submit">Load</button>
+</form>
+
+</body>
+
+</html>
