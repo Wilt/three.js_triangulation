@@ -2,7 +2,7 @@ var urlParams = {};
 var shapes = [];
 var algorithms = [
     "original",
-    "earclip",
+    "earcut",
     "poly2tri",
     "libtess"
 ];
