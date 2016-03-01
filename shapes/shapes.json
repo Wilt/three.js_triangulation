@@ -2,136 +2,136 @@
   {
     "name": "L-shape",
     "source": "-",
-    "url": "shapes\\L-shape.json"
+    "url": "/shapes/L-shape.json"
   },
   {
     "name": "L-shape with four holes",
     "source": "-",
-    "url": "shapes\\L-shape_with_four_holes.json"
+    "url": "/shapes/L-shape_with_four_holes.json"
   },
   {
     "name": "L-shape with four intersecting points",
     "source": "-",
-    "url": "shapes\\L-shape_with_four_intersecting_points.json"
+    "url": "/shapes/L-shape_with_four_intersecting_points.json"
   },
   {
     "name": "L-shape with four intersecting edges",
     "source": "-",
-    "url": "shapes\\L-shape_with_four_intersecting_edges.json"
+    "url": "/shapes/L-shape_with_four_intersecting_edges.json"
   },
   {
     "name": "dude shape with two holes",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\dude_shape_two_holes.json"
+    "url": "/shapes/dude_shape_two_holes.json"
   },
   {
     "name": "10000 vertices",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\10000_vertices.json"
+    "url": "/shapes/10000_vertices.json"
   },
   {
     "name": "2-shape",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\2-shape.json"
+    "url": "/shapes/2-shape.json"
   },
   {
     "name": "Big roundish polygon",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\big_roundish_polygon.json"
+    "url": "/shapes/big_roundish_polygon.json"
   },
   {
     "name": "bird",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\bird.json"
+    "url": "/shapes/bird.json"
   },
   {
     "name": "broke polygon",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\broke.json"
+    "url": "/shapes/broke.json"
   },
   {
     "name": "Butterfly like polygon",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\butterfly_like_polygon.json"
+    "url": "/shapes/butterfly_like_polygon.json"
   },
   {
     "name": "diamond",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\diamond.json"
+    "url": "/shapes/diamond.json"
   },
   {
     "name": "France",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\france.json"
+    "url": "/shapes/france.json"
   },
   {
     "name": "Kzer-Za Dreadnought",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\kzer-za_dreadnought.json"
+    "url": "/shapes/kzer-za_dreadnought.json"
   },
   {
     "name": "e-shape",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\e-shape.json"
+    "url": "/shapes/e-shape.json"
   },
   {
     "name": "long polygon",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\long_polygon.json"
+    "url": "/shapes/long_polygon.json"
   },
   {
     "name": "map indoor",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\map_indoor.json"
+    "url": "/shapes/map_indoor.json"
   },
   {
     "name": "Nazca heron",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\nazca_heron.json"
+    "url": "/shapes/nazca_heron.json"
   },
   {
     "name": "spiral",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\spiral.json"
+    "url": "/shapes/spiral.json"
   },
   {
     "name": "star",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\star.json"
+    "url": "/shapes/star.json"
   },
   {
     "name": "tank",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "url": "shapes\\tank.json"
+    "url": "/shapes/tank.json"
   },
   {
     "name": "building",
     "source": "https://github.com/mapbox/earcut/tree/master/test/fixtures",
-    "url": "shapes\\building.json"
+    "url": "/shapes/building.json"
   },
   {
     "name": "degenerate",
     "source": "https://github.com/mapbox/earcut/tree/master/test/fixtures",
-    "url": "shapes\\degenerate.json"
+    "url": "/shapes/degenerate.json"
   },
   {
     "name": "empty square",
     "source": "https://github.com/mapbox/earcut/blob/master/test/fixtures",
-    "url": "shapes\\empty_square.json"
+    "url": "/shapes/empty_square.json"
   },
   {
     "name": "Hilbert",
     "source": "https://github.com/mapbox/earcut/blob/master/test/fixtures",
-    "url": "shapes\\hilbert.json"
+    "url": "/shapes/hilbert.json"
   },
   {
     "name": "hole touching outer",
     "source": "https://github.com/mapbox/earcut/blob/master/test/fixtures",
-    "url": "shapes\\hole_touching_outer.json"
+    "url": "/shapes/hole_touching_outer.json"
   },
   {
     "name": "outside ring",
     "source": "https://github.com/mapbox/earcut/blob/master/test/fixtures",
-    "url": "shapes\\outside_ring.json"
+    "url": "/shapes/outside_ring.json"
   }
 ]
