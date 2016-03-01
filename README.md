@@ -11,7 +11,7 @@ Right now the library seamlessly supports the following triangulation libraries:
 — [poly2tri](https://github.com/r3mi/poly2tri.js) - poly2tri triangulation library<br>
 — [libtess](https://github.com/brendankenny/libtess.js/) - libtess tesselation library<br> 
 
-To be able to use the **libtess** library you will have to also load the file `tessy.js` into your project. 
+To be able to use the **libtess** library you will have to also load the file [tessy.js](https://rawgit.com/Wilt/three.js_triangulation/master/tessy.js) into your project. 
 
 ### Triangulation comparison ###
 
@@ -19,22 +19,23 @@ The second aim of the project is to create compare the results of these differen
 
 ### Adapter ###
 
-The library comes with an adapter which can make it easy to switch between the different triangulation libraries inside your project. The implementation is simple.
-The adapter has two public methods:
+The library comes with an adapter [triangulation.js](https://rawgit.com/Wilt/three.js_triangulation/master/tessy.js) which can make it easy to switch between the different triangulation libraries inside your project. The implementation is simple.
+The adapter is availble through `THREE.Triangulation` and has two public methods:
 
 1. `setLibrary` - sets the library that you currently want to use.
   * The available libraries are in an object called `libraries`. So to set earcut as your library: `THREE.Triangulation.setLibrary( THREE.Triangulation.libraries.earcut );` (or  simply use the string `'earcut'`).
 
 2. `setTimer` - sets the timer on/off.
   * The timer will output the time that was needed to perform the triangulation operations inside the console giving you valuable feedback on the performance of the chosen library.
+  To turn the timer on simply call: `THREE.Triangulation.setTimer( true );`
 
 
 ### Viewers ###
 
 For now there are two viewers.
 
-- One [single screen viewer](https://rawgit.com/Wilt/three.js_triangulation/master/single.html) where the triangulation result of a certain shape with a selected algorithm can be viewed.
-- And [multiple screen viewer](https://rawgit.com/Wilt/three.js_triangulation/master/multiple.html) where the triangulation result of a certain shape can be seen for all algorithms at the same time.
+- One [single screen viewer](https://rawgit.com/Wilt/three.js_triangulation/master/viewers/single.html) where the triangulation result of a certain shape with a selected algorithm can be viewed.
+- And [multiple screen viewer](https://rawgit.com/Wilt/three.js_triangulation/master/viewers/multiple.html) where the triangulation result of a certain shape can be seen for all algorithms at the same time.
 
 
 ### Benchmarking ###
