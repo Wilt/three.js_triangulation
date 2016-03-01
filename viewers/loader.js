@@ -119,13 +119,13 @@ function populateShapeSelectList() {
 
             option.textContent = shape.name;
 
-            option.value = i;
+            option.value = shape.fileName;
 
             if ('shape' in urlParams && option.value == urlParams['shape']) {
 
                 option.selected = true;
 
-                loadShape( shape.url, onLoad );
+                loadShape( "../shapes/" + shape.fileName, onLoad );
 
             }
 
