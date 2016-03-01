@@ -1,10 +1,10 @@
 var urlParams = {};
 var shapes = [];
 var algorithms = [
-    "original",
-    "earcut",
-    "poly2tri",
-    "libtess"
+    THREE.Triangulation.libraries.original,
+    THREE.Triangulation.libraries.earcut,
+    THREE.Triangulation.libraries.poly2tri,
+    THREE.Triangulation.libraries.libtess
 ];
 
 loadShape = function( url, callback ){
@@ -90,7 +90,7 @@ function createShape( data ){
  */
 function populateShapeSelectList() {
 
-    var url = 'shapes.json',
+    var url = '../shapes/shapes.json',
         XMLHttp = new XMLHttpRequest();
 
     XMLHttp.addEventListener('load', callback);
