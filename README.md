@@ -19,7 +19,7 @@ The second aim of the project is to create compare the results of these differen
 
 ### Adapter ###
 
-The library comes with an adapter [triangulation.js](https://rawgit.com/Wilt/three.js_triangulation/master/tessy.js) which can make it easy to switch between the different triangulation libraries inside your project. The implementation is simple.
+The library comes with an adapter [triangulation.js](https://rawgit.com/Wilt/three.js_triangulation/master/triangulation.js) which can make it easy to switch between the different triangulation libraries inside your project. The implementation is simple.
 The adapter is availble through `THREE.Triangulation` and has two public methods:
 
 1. `setLibrary` - sets the library that you currently want to use.
