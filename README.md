@@ -20,7 +20,7 @@ The second aim of the project is to create compare the results of these differen
 The library comes with an adapter which can make it easy to switch between the different triangulation libraries inside your project. The implementation is simple.
 The adapter has two public methods:
 
-1. `setLibrary` - sets the library to the library you want to use.
+1. `setLibrary` - sets the library that you currently want to use.
   * The available libraries are in an object called `libraries`. So to set earcut as your library: `THREE.Triangulation.setLibrary( THREE.Triangulation.libraries.earcut );` (or  simply use the string `'earcut'`).
 
 2. `setTimer` - sets the timer on/off.
