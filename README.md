@@ -34,8 +34,8 @@ The adapter is available through `THREE.Triangulation` and has two public method
 
 For now there are two viewers.
 
-- One [single screen viewer](viewers/single.html) where the triangulation result of a certain shape with a selected algorithm can be viewed.
-- And [multiple screen viewer](viewers/multiple.html) where the triangulation result of a certain shape can be seen for all algorithms at the same time.
+- One [single screen viewer](https://rawgit.com/Wilt/three.js_triangulation/master/viewers/single.html) where the triangulation result of a certain shape with a selected algorithm can be viewed.
+- And [multiple screen viewer](https://rawgit.com/Wilt/three.js_triangulation/master/viewers/multiple.html) where the triangulation result of a certain shape can be seen for all algorithms at the same time.
 
 
 ### Benchmarking ###
