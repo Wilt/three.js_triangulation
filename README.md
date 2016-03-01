@@ -11,7 +11,7 @@ Right now the library seamlessly supports the following triangulation libraries:
 — [poly2tri](https://github.com/r3mi/poly2tri.js) - poly2tri triangulation library<br>
 — [libtess](https://github.com/brendankenny/libtess.js/) - libtess tessellation library<br> 
 
-To be able to use the **libtess** library you will have to also load the file [tessy.js](https://rawgit.com/Wilt/three.js_triangulation/master/tessy.js) into your project. 
+To be able to use the **libtess** library you will have to also load the file [tessy.js](tessy.js) into your project. 
 
 ### Triangulation comparison ###
 
@@ -19,7 +19,7 @@ The second aim of the project is to create compare the results of these differen
 
 ### Adapter ###
 
-The library comes with an adapter [triangulation.js](https://rawgit.com/Wilt/three.js_triangulation/master/triangulation.js) which can make it easy to switch between the different triangulation libraries inside your project. The implementation is simple.
+The library comes with an adapter [triangulation.js](triangulation.js) which can make it easy to switch between the different triangulation libraries inside your project. The implementation is simple.
 The adapter is available through `THREE.Triangulation` and has two public methods:
 
 1. `setLibrary` - sets the library that you currently want to use.
@@ -34,8 +34,8 @@ The adapter is available through `THREE.Triangulation` and has two public method
 
 For now there are two viewers.
 
-- One [single screen viewer](https://rawgit.com/Wilt/three.js_triangulation/master/viewers/single.html) where the triangulation result of a certain shape with a selected algorithm can be viewed.
-- And [multiple screen viewer](https://rawgit.com/Wilt/three.js_triangulation/master/viewers/multiple.html) where the triangulation result of a certain shape can be seen for all algorithms at the same time.
+- One [single screen viewer](viewers/single.html) where the triangulation result of a certain shape with a selected algorithm can be viewed.
+- And [multiple screen viewer](viewers/multiple.html) where the triangulation result of a certain shape can be seen for all algorithms at the same time.
 
 
 ### Benchmarking ###
