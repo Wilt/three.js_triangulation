@@ -83,19 +83,14 @@ function onLoad( shape ) {
 
     var index, geometry, material, mesh, wireFrame, box, algorithm;
 
-    index = urlParams['algorithm'];
-
-    setShapeUtils( index );
-
-    algorithm = algorithms[ index ];
+    THREE.Triangulation.setLibrary( urlParams['algorithm'] );
+    THREE.Triangulation.setTimer( true );
 
     try {
 
         geometry = shape.makeGeometry();
 
     } catch( error ){
-
-        console.timeEnd( algorithm );
 
         console.warn( algorithm + " failed: " + error.message );
 
@@ -126,20 +121,19 @@ function onLoad( shape ) {
  */
 function populateAlgorithmSelectList(){
 
-    var i, algorithm, option,
-        select = document.getElementById('algorithm_select');
+    var i, algorithm, option, select = document.getElementById('algorithm_select');
 
-    for ( i = 0; i < 4; i++) {
+    for ( i = 0; i < algorithms.length; i++ ) {
 
-        algorithm = algorithms[i];
+        algorithm  = algorithms[i];
 
         option = document.createElement('option');
 
         option.textContent = algorithm;
 
-        option.value = i;
+        option.value = algorithm;
 
-        if ('algorithm' in urlParams && option.value == urlParams['algorithm']) {
+        if ('algorithm' in urlParams && algorithm == urlParams['algorithm']) {
 
             option.selected = true;
 

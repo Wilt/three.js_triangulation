@@ -11,6 +11,15 @@ The aim of the project is to create compare the results of different triangulati
 — [libtess](https://github.com/brendankenny/libtess.js/) - libtess tesselation library<br>
 
 
+### Adapter ###
+
+The library comes with an adapter which can make it easy to switch between the different triangulation libraries inside your project. The implementation is simple.
+The adapter has two public methods:
+
+1) `setLibrary` - sets the library to the library you want to use. The available libraries are in an object called `libraries`. So to set earcut as your library: `THREE.Triangulation.setLibrary( THREE.Triangulation.libraries.earcut );` (or  simply use the string 'earcut')
+2) `setTimer` - sets the timer on/off. The timer will output the time that was needed to perform the triangulation operations inside the console giving you valuable feedback on the performance of the chosen library.
+
+
 ### Viewers ###
 
 For now there are two viewers.

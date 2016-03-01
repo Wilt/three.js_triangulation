@@ -101,21 +101,19 @@ function setCameras() {
  */
 function onLoad( shape ) {
 
-    var i, geometry, material, mesh, wireFrame, box, algorithm;
+    THREE.Triangulation.setTimer( true );
 
-    for( i = 0; i < 4; i++ ){
+    var i, geometry, material, mesh, wireFrame, box;
 
-        algorithm = algorithms[i];
+    for( i = 0; i < algorithms.length; i++ ){
 
-        setShapeUtils(i);
+        THREE.Triangulation.setLibrary( algorithms[i] );
 
         try {
 
             geometry = shape.makeGeometry();
 
         } catch( error ){
-
-            console.timeEnd( algorithm );
 
             console.warn( algorithm + " failed: " + error.message );
 

@@ -7,7 +7,6 @@ var algorithms = [
     "libtess"
 ];
 
-
 loadShape = function( url, callback ){
     var XMLHttp = new XMLHttpRequest();
 
