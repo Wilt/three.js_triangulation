@@ -11,6 +11,8 @@ Right now the library seamlessly supports the following triangulation libraries:
 — [poly2tri](https://github.com/r3mi/poly2tri.js) - poly2tri triangulation library<br>
 — [libtess](https://github.com/brendankenny/libtess.js/) - libtess tesselation library<br> 
 
+To be able to use the **libtess** library you will have to also load the file `tessy.js` into your project. 
+
 ### Triangulation comparison ###
 
 The second aim of the project is to create compare the results of these different triangulation/tesselation algorithms/libraries in **three.js**.
