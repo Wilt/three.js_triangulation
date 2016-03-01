@@ -7,19 +7,20 @@ var algorithms = [
     THREE.Triangulation.libraries.libtess
 ];
 
-loadShape = function( url, callback ){
+loadShape = function( url, callback ) {
+
     var XMLHttp = new XMLHttpRequest();
 
-    XMLHttp.addEventListener("progress", onProgress);
-    XMLHttp.addEventListener("load", onLoad );
+    XMLHttp.addEventListener( "progress", onProgress );
+    XMLHttp.addEventListener( "load", onLoad );
     //XMLHttp.addEventListener("error", onError);
     //XMLHttp.addEventListener("abort", onAbort);
     XMLHttp.responseType = 'json';
 
-    XMLHttp.open('GET', url, true);
+    XMLHttp.open( 'GET', url, true );
     XMLHttp.send();
 
-    function onLoad(){
+    function onLoad() {
 
         var data = this.response;
 
@@ -35,43 +36,51 @@ loadShape = function( url, callback ){
  * Load url params
  */
 function loadUrlParams() {
+
     var match,
-        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        pl = /\+/g, // Regex for replacing addition symbol with a space
         search = /([^&=]+)=?([^&]*)/g,
-        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
-        query  = window.location.search.substring(1);
+        decode = function( s ) {
+
+            return decodeURIComponent( s.replace( pl, " " ) );
+
+        },
+        query = window.location.search.substring( 1 );
 
     urlParams = {};
-    while (match = search.exec(query)){
-        urlParams[decode(match[1])] = decode(match[2]);
+    while ( match = search.exec( query ) ) {
+
+        urlParams[ decode( match[ 1 ] ) ] = decode( match[ 2 ] );
+
     }
+
 }
 
 /**
  * @param data
  * @returns {THREE.Shape|*}
  */
-function createShape( data ){
+function createShape( data ) {
 
     var i, il, j, jl, points, shape, hole;
 
     points = [];
 
-    for( i = 0, il = data.shape.length; i < il; i+=2 ){
+    for ( i = 0, il = data.shape.length; i < il; i += 2 ) {
 
-        points.push( new THREE.Vector2( data.shape[i], data.shape[i+1]) );
+        points.push( new THREE.Vector2( data.shape[ i ], data.shape[ i + 1 ] ) );
 
     }
 
     shape = new THREE.Shape( points );
 
-    for( i = 0, il = data.holes.length; i < il; i++ ){
+    for ( i = 0, il = data.holes.length; i < il; i ++ ) {
 
         points = [];
 
-        for( j = 0, jl = data.holes[i].length; j < jl; j+=2 ){
+        for ( j = 0, jl = data.holes[ i ].length; j < jl; j += 2 ) {
 
-            points.push( new THREE.Vector2( data.holes[i][j], data.holes[i][j+1] ));
+            points.push( new THREE.Vector2( data.holes[ i ][ j ], data.holes[ i ][ j + 1 ] ) );
 
         }
 
@@ -93,35 +102,35 @@ function populateShapeSelectList() {
     var url = '../shapes/shapes.json',
         XMLHttp = new XMLHttpRequest();
 
-    XMLHttp.addEventListener('load', callback);
+    XMLHttp.addEventListener( 'load', callback );
 
     XMLHttp.responseType = 'json';
 
-    XMLHttp.open('GET', url, true);
+    XMLHttp.open( 'GET', url, true );
 
     XMLHttp.send();
 
-    function callback(){
+    function callback() {
 
-        var div = document.getElementById('progress');
+        var div = document.getElementById( 'progress' );
 
         div.style.display = 'none';
 
-        var select = document.getElementById('shape_select');
+        var select = document.getElementById( 'shape_select' );
 
         var shapes = this.response;
 
-        for (var i = 0; i < shapes.length; i++) {
+        for ( var i = 0; i < shapes.length; i ++ ) {
 
-            var shape = shapes[i];
+            var shape = shapes[ i ];
 
-            var option = document.createElement('option');
+            var option = document.createElement( 'option' );
 
             option.textContent = shape.name;
 
             option.value = shape.fileName;
 
-            if ('shape' in urlParams && option.value == urlParams['shape']) {
+            if ( 'shape' in urlParams && option.value == urlParams[ 'shape' ] ) {
 
                 option.selected = true;
 
@@ -129,7 +138,7 @@ function populateShapeSelectList() {
 
             }
 
-            select.appendChild(option);
+            select.appendChild( option );
 
         }
 
@@ -140,7 +149,7 @@ function populateShapeSelectList() {
 /**
  * On progress callback
  */
-function onProgress( event ){
+function onProgress( event ) {
 
     var progress = document.getElementById( 'progress' );
 
