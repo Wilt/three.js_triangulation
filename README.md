@@ -34,3 +34,9 @@ For now there are two viewers.
 ### Benchmarking ###
 
 The next step will be to do some benchmarking of the different algorithms
+
+### Support for another (or your own) triangulation library ###
+
+Do you want support for another (or your own) triangulation library, then please make an issue or a pull-request where you explain what the added value of the 
+proposed library is compared to the ones that are already implemented. It would also be good to make a live example where you show that your code is working. 
+This will increase the chances of the library being implemented.
