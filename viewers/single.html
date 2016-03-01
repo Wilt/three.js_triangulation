@@ -4,44 +4,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>multiple algorithms viewer</title>
+    <title>single algorithm viewer</title>
     <script type="text/javascript" src="https://rawgit.com/mrdoob/three.js/master/build/three.js"></script>
     <script src='https://rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js'></script>
     <script>module = {}</script>
     <script src='https://rawgit.com/mapbox/earcut/master/src/earcut.js'></script>
     <script src='https://rawgit.com/r3mi/poly2tri.js/master/dist/poly2tri.js'></script>
     <script src='https://rawgit.com/brendankenny/libtess.js/gh-pages/libtess.min.js'></script>
-    <script type="text/javascript" src="tessy.js"></script>
-    <script type="text/javascript" src="triangulation.js"></script>
-    <script type="text/javascript" src="multiple_viewer.js"></script>
+    <script type="text/javascript" src="../tessy.js"></script>
+    <script type="text/javascript" src="../triangulation.js"></script>
     <script type="text/javascript" src="loader.js"></script>
+    <script type="text/javascript" src="single_viewer.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
 <body>
 <div id="container">
-    <div>
-        <span class="info">
-            <a href="https://github.com/mrdoob/three.js/blob/master/src/extras/ShapeUtils.js" target="_blank">three.js</a> - original algorithm from THREE.ShapeUtils
-        </span>
-    </div>
-    <div>
-        <span class="info">
-            <a href="https://github.com/mapbox/earcut" target="_blank">earcut.js</a> - earcut triangulation library
-        </span>
-    </div>
-    <div>
-        <span class="info">
-            <a href="https://github.com/r3mi/poly2tri.js" target="_blank">poly2tri.js</a> - poly2tri triangulation library
-        </span>
-    </div>
-    <div>
-        <span class="info">
-            <a href="https://github.com/brendankenny/libtess.js/" target="_blank">libtess.js</a> - libtess tesselation library
-        </span>
-    </div>
 </div>
-
+<div id="info">
+    <a href="http://threejs.org/" target="_blank">three.js</a> - Shape triangulation
+</div>
 <div id="center">
     <div id="progress"></div>
 </div>
@@ -50,6 +32,11 @@
         Select a shape:
     </label>
     <select id="shape_select" name="shape">
+    </select>
+    <label for="algorithm_select" >
+        Select an algorithm:
+    </label>
+    <select id="algorithm_select" name="algorithm">
     </select>
     <button type="submit" form="load_shape" value="Submit">Load</button>
 </form>
