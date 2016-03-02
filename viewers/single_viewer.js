@@ -74,13 +74,9 @@ function onWindowResize() {
     var width = window.innerWidth,
         height = window.innerHeight;
 
-    for ( var i = 0; i < 4; i ++ ) {
-
-        camera.aspect = width / height;
-        camera.updateProjectionMatrix();
-        renderer.setSize( width, height );
-
-    }
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    renderer.setSize( width, height );
 
 }
 
