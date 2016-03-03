@@ -133,5 +133,10 @@
     "name": "outside ring",
     "source": "https://github.com/mapbox/earcut/blob/master/test/fixtures",
     "fileName": "outside_ring.json"
+  },
+  {
+    "name": "tree",
+    "source": "http://stackoverflow.com/q/16241854/1697459",
+    "fileName": "tree.json"
   }
 ]
