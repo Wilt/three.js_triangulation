@@ -85,9 +85,7 @@ function onWindowResize() {
  */
 function onLoad( shape ) {
 
-    console.log( this );
-
-    var index, geometry, material, mesh, wireFrame, box, algorithm;
+    var geometry, material, mesh, wireFrame, box, algorithm;
 
     algorithm =  urlParams[ 'algorithm' ];
 
@@ -98,33 +96,29 @@ function onLoad( shape ) {
 
         geometry = shape.makeGeometry();
 
-        geometry.algorithm = algorithm;
+        material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
+
+        mesh = new THREE.Mesh( geometry, material );
+
+        wireFrame = new THREE.WireframeHelper( mesh, 0xffffff );
+
+        geometry.computeBoundingBox();
+
+        box = geometry.boundingBox;
+
+        mesh.position.copy( box.center().negate() );
+
+        camera.position.setZ( Math.abs( Math.max( box.max.x - box.min.x, box.max.y - box.min.y ) ) * 1.5 );
+
+        scene.add( wireFrame );
+
+        scene.add( mesh );
 
     } catch ( error ) {
 
         console.warn( algorithm + " failed: " + error.message );
 
     }
-
-    console.log( geometry.algorithm );
-
-    material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
-
-    mesh = new THREE.Mesh( geometry, material );
-
-    wireFrame = new THREE.WireframeHelper( mesh, 0xffffff );
-
-    geometry.computeBoundingBox();
-
-    box = geometry.boundingBox;
-
-    mesh.position.copy( box.center().negate() );
-
-    camera.position.setZ( Math.abs( Math.max( box.max.x - box.min.x, box.max.y - box.min.y ) ) * 1.5 );
-
-    scene.add( wireFrame );
-
-    scene.add( mesh );
 
 }
 
