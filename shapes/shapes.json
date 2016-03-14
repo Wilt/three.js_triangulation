@@ -47,7 +47,7 @@
   {
     "name": "broke polygon",
     "source": "http://r3mi.github.io/poly2tri.js/",
-    "fileName": "broke.json"
+    "fileName": "broke_polygon.json"
   },
   {
     "name": "Butterfly like polygon",
