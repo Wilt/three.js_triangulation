@@ -117,11 +117,13 @@ function onLoad( shape ) {
 
     THREE.Triangulation.setTimer( true );
 
-    var i, geometry, material, mesh, wireFrame, box;
+    var i, algorithm, geometry, material, mesh, wireFrame, box;
 
     for ( i = 0; i < algorithms.length; i ++ ) {
 
         THREE.Triangulation.setLibrary( algorithms[ i ] );
+
+        algorithm = algorithms[ i ];
 
         try {
 
