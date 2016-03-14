@@ -4,7 +4,13 @@ if ( ! window.THREE ) throw new Error( 'ERROR: three.js not loaded' );
 
 THREE.Triangulation = ( function() {
 
-    var timer = false;
+    var timer = {
+
+        enabled: false,
+        start: null,
+        end: null
+
+    };
 
     var library = 'original';
 
@@ -215,7 +221,7 @@ THREE.Triangulation = ( function() {
 
         checkDependencies( library );
 
-        if ( timer ) {
+        if ( timer.enabled ) {
 
             THREE.ShapeUtils.triangulate = function() {
 
@@ -225,11 +231,13 @@ THREE.Triangulation = ( function() {
 
             THREE.ShapeUtils.triangulateShape = function() {
 
-                console.time( library );
+                timer.start = Date.now();
 
                 var result = adapters[ library ].triangulateShape.apply( this, arguments );
 
-                console.timeEnd( library );
+                timer.end = Date.now();
+
+                console.log( library + ": " + ( timer.end - timer.start ) + "ms" );
 
                 return result;
 
@@ -298,9 +306,26 @@ THREE.Triangulation = ( function() {
      */
     function setTimer( boolean ) {
 
-        timer = boolean;
+        timer.enabled = boolean;
 
         init();
+
+    }
+
+    /**
+     * Get total time in seconds
+     *
+     * @return number
+     */
+    function getTime() {
+
+        if( timer.enabled ){
+
+            return ( timer.end - timer.start );
+
+        }
+
+        return false;
 
     }
 
@@ -311,6 +336,8 @@ THREE.Triangulation = ( function() {
         libraries: libraries,
 
         setTimer: setTimer,
+
+        getTime: getTime,
 
         setLibrary: setLibrary
 

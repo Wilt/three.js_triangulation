@@ -110,6 +110,30 @@ function setCameras() {
 
 }
 
+function onError( index, algorithm, error ){
+
+    var container = document.getElementById( 'container' );
+
+    var span = document.createElement( 'span' );
+
+    span.className = 'error';
+
+    span.textContent = "FAILED: " + error.message;
+
+}
+
+function onSuccess( index, algorithm, time ){
+
+    var container = document.getElementById( 'container' );
+
+    var span = document.createElement( 'span' );
+
+    span.className = 'success';
+
+    span.textContent = "DONE: " + time + " ms";
+
+}
+
 /**
  * On load callback
  */
@@ -151,9 +175,13 @@ function onLoad( shape ) {
 
             scenes[i].add(mesh);
 
+            time = THREE.Triangulation.getTime();
+
+            onSuccess( i, algorithm, time );
+
         } catch ( error ) {
 
-            console.warn( algorithm + " failed: " + error.message );
+            onError( i, algorithm, error );
 
         }
 

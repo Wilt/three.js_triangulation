@@ -25,7 +25,7 @@ The adapter is available through `THREE.Triangulation` and has two public method
 1. `setLibrary` - sets the library that you currently want to use.
   * The available libraries are in an object called `libraries`. So to set earcut as your library: `THREE.Triangulation.setLibrary( THREE.Triangulation.libraries.earcut );` (or  simply use the string `'earcut'`).
 
-2. `setTimer` - sets the timer on/off.
+2. `setTimer` - turns the timer on/off.
   * The timer will output the time that was needed to perform the triangulation operations inside the console giving you valuable feedback on the performance of the chosen library.
   To turn the timer on simply call: `THREE.Triangulation.setTimer( true );`
 
