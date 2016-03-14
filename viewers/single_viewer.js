@@ -85,20 +85,28 @@ function onWindowResize() {
  */
 function onLoad( shape ) {
 
+    console.log( this );
+
     var index, geometry, material, mesh, wireFrame, box, algorithm;
 
-    THREE.Triangulation.setLibrary( urlParams[ 'algorithm' ] );
+    algorithm =  urlParams[ 'algorithm' ];
+
+    THREE.Triangulation.setLibrary( algorithm );
     THREE.Triangulation.setTimer( true );
 
     try {
 
         geometry = shape.makeGeometry();
 
+        geometry.algorithm = algorithm;
+
     } catch ( error ) {
 
         console.warn( algorithm + " failed: " + error.message );
 
     }
+
+    console.log( geometry.algorithm );
 
     material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
 

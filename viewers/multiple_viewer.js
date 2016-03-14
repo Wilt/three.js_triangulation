@@ -110,6 +110,13 @@ function setCameras() {
 
 }
 
+function onTriangulationError( index, algorithm, error ){
+
+
+
+
+}
+
 /**
  * On load callback
  */
@@ -129,29 +136,38 @@ function onLoad( shape ) {
 
             geometry = shape.makeGeometry();
 
+            geometry.algorithm = algorithm;
+
         } catch ( error ) {
 
             console.warn( algorithm + " failed: " + error.message );
 
         }
 
-        material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
+        // If a geometry is returned still add it to scene to check the result
+        if( geometry instanceof THREE.Geometry ) {
 
-        mesh = new THREE.Mesh( geometry, material );
+            material = new THREE.MeshBasicMaterial({color: 0xff0000});
 
-        wireFrame = new THREE.WireframeHelper( mesh, 0xffffff );
+            mesh = new THREE.Mesh(geometry, material);
 
-        geometry.computeBoundingBox();
+            wireFrame = new THREE.WireframeHelper(mesh, 0xffffff);
 
-        box = geometry.boundingBox;
+            geometry.computeBoundingBox();
 
-        mesh.position.copy( box.center().negate() );
+            console.log(geometry.algorithm);
 
-        camera.position.setZ( Math.abs( Math.max( box.max.x - box.min.x, box.max.y - box.min.y ) ) * 1.5 );
+            box = geometry.boundingBox;
 
-        scenes[ i ].add( wireFrame );
+            mesh.position.copy(box.center().negate());
 
-        scenes[ i ].add( mesh );
+            camera.position.setZ(Math.abs(Math.max(box.max.x - box.min.x, box.max.y - box.min.y)) * 1.5);
+
+            scenes[i].add(wireFrame);
+
+            scenes[i].add(mesh);
+
+        }
 
     }
 
