@@ -237,7 +237,7 @@ THREE.Triangulation = ( function() {
 
                 timer.end = Date.now();
 
-                console.log( library + ": " + ( timer.end - timer.start ) + "ms" );
+                console.log( library + ": " + ( timer.end - timer.start ) + "ms", 'color: #0000ff');
 
                 return result;
 

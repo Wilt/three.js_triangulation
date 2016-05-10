@@ -163,8 +163,6 @@ function onLoad( shape ) {
 
             geometry.computeBoundingBox();
 
-            console.log(geometry.algorithm);
-
             box = geometry.boundingBox;
 
             mesh.position.copy(box.center().negate());
