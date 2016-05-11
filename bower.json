@@ -1,6 +1,9 @@
 {
   "name": "three.js_triangulation",
   "version": "0.9",
+  "authors": [
+    "Wilt"
+  ],
   "dependencies": {
     "three.js": "https://github.com/mrdoob/three.js.git#r75",
     "earcut": "https://github.com/mapbox/earcut.git",
@@ -8,5 +11,9 @@
     "libtess": "https://github.com/brendankenny/libtess.js.git",
     "jasmine": "~2.4.1"
   },
-  "private": true
+  "ignore": [
+    "benchmark",
+    "bower_components",
+    "README.md"
+  ]
 }
