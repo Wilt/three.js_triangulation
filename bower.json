@@ -1,0 +1,12 @@
+{
+  "name": "three.js_triangulation",
+  "version": "0.9",
+  "dependencies": {
+    "three.js": "https://github.com/mrdoob/three.js.git#r75",
+    "earcut": "https://github.com/mapbox/earcut.git",
+    "poly2tri": "latest",
+    "libtess": "https://github.com/brendankenny/libtess.js.git",
+    "jasmine": "~2.4.1"
+  },
+  "private": true
+}
