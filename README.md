@@ -51,9 +51,17 @@ More tests will be added later.
 
 The [example page](https://rawgit.com/Wilt/three.js_triangulation/master/example.html) shows how to implement the adapter and dependencies inside your project.
 
-### Install dependencies using bower.json ###
+### Install using bower.json ###
 
-You can install the dependencies using the provided bower.json file with bower as normally:
+You can install the triangulation library using bower. Include the library under dependencies in your `bower.json` file:
+
+    "dependencies": {
+        ...
+        "three.js_triangulation": "https://github.com/Wilt/three.js_triangulation.git"
+        ...
+    }
+
+And then run bower update:
  
     bower update
     
