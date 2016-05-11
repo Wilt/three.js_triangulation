@@ -37,20 +37,6 @@ For now there are two viewers.
 - One [single screen viewer](https://rawgit.com/Wilt/three.js_triangulation/master/viewers/single.html) where the triangulation result of a certain shape with a selected algorithm can be viewed.
 - And [multiple screen viewer](https://rawgit.com/Wilt/three.js_triangulation/master/viewers/multiple.html) where the triangulation result of a certain shape can be seen for all algorithms at the same time.
 
-
-### Benchmarking ###
-
-The next step will be to do some benchmarking of the different algorithms
-
-### Tests ###
-
-Some basic tests in Jasmine are added inside the `test` folder.
-More tests will be added later.
-
-### Example page###
-
-The [example page](https://rawgit.com/Wilt/three.js_triangulation/master/example.html) shows how to implement the adapter and dependencies inside your project.
-
 ### Install using bower.json ###
 
 You can install the triangulation library using bower. Include the library under dependencies in your `bower.json` file:
@@ -65,7 +51,23 @@ And then run bower update:
  
     bower update
     
+In this case all the supported triangulation libraries will be automatically installed and you will be able to use them directly.
+
 If you don't have bower installed I would like to refer to [the official bower documentation](http://bower.io/)
+
+### Example page###
+
+The [example page](https://rawgit.com/Wilt/three.js_triangulation/master/example.html) shows how to implement the adapter and dependencies inside your html file.<br>
+After installing using bower following the description above you can copy this file to the root folder of your project.
+
+### Tests ###
+
+Some basic tests in Jasmine are added inside the `test` folder.<br>
+More tests will be added later.
+
+### Benchmarking ###
+
+The next step will be to do some benchmarking of the different algorithms
 
 ### Support for another (or your own) triangulation library ###
 
