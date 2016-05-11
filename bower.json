@@ -13,6 +13,10 @@
   },
   "ignore": [
     "benchmark",
+    "css/viewer.css",
+    "shapes",
+    "test",
+    "viewers",
     "bower_components",
     "README.md"
   ]
