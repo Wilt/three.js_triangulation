@@ -1,0 +1,12 @@
+code, pre {
+    color: #0000FF;
+    font-weight: bold;
+    padding: 4px 4px 4px 4px;
+    background-color: #eeeeee;
+}
+
+pre {
+    margin: 16px 16px 16px 16px;
+    baseline-shift: baseline;
+    white-space: pre-line;
+}

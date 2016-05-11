@@ -14,6 +14,10 @@ body {
     bottom:0;
 }
 
+code {
+    color: #0000FF
+}
+
 span{
     display:block;
     position: absolute;
