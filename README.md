@@ -57,7 +57,7 @@ If you don't have bower installed I would like to refer to [the official bower d
 
 ### Example page###
 
-The [example page](https://rawgit.com/Wilt/three.js_triangulation/master/example.html) shows how to implement the adapter and dependencies inside your html file.<br>
+The [`example.html` page](https://rawgit.com/Wilt/three.js_triangulation/master/example.html) shows how to implement the adapter and dependencies inside your html file.<br>
 After installing using bower following the description above you can copy this file to the root folder of your project.
 
 ### Tests ###
